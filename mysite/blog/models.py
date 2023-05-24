@@ -3,6 +3,7 @@ from django.db import models
 from django.utils import timezone
 
 
+
 # Create your models here.
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -24,7 +25,7 @@ class Voetbalspeler(models.Model):
     actual_club = models.CharField(max_length = 100)
     name_author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     create_date = models.DateTimeField(default=timezone.now)
-    last_modified = models.DateTimeField(blank=True, null=True)
+    last_modified = models.DateTimeField(default=timezone.now)
 
     def publish(self):
         self.last_modified = timezone.now()
