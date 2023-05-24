@@ -17,3 +17,18 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Voetbalspeler(models.Model):
+    name_player = models.CharField(max_length = 200)
+    actual_club = models.CharField(max_length = 100)
+    name_author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    create_date = models.DateTimeField(default=timezone.now)
+    last_modified = models.DateTimeField(blank=True, null=True)
+
+    def publish(self):
+        self.last_modified = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.name_player
