@@ -1,14 +1,50 @@
 body {
+    color: black;
+}
+.row {
+    --bs-gutter-x: 0rem;
+}
+
+header {
     background-color: orange;
+    color: black;
+    height: 12vh;
+    padding: 3vh 3vw;
+    min-height: 70px;
+}
+
+header h1 {
     color: black;
 }
 
-h1 {
-    color: white;
+footer {
+    background-color: orange;
+    height: 5vh;
+}
+
+section{
+    height: 83vh;
+    background-color: #990000;
+    padding: 2em 0em;
+}
+.blogposts{
+    width: 41,6%;
+    background-color: pink;
+    margin-left: 41,6%;
+}
+
+
+h2 a {
+    color: orange;
+}
+
+h2 a:hover{
+    color: orange;
 }
 
 article {
-    width: 500px;
+    width: 100%;
     margin-bottom: 40px;
-    border: 3px solid red;
+    border: 3px solid white;
+    font-size: 0.95em;
 }
