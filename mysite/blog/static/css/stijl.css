@@ -1,6 +1,7 @@
 body {
     color: black;
 }
+
 .row {
     --bs-gutter-x: 0rem;
 }
